@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.status-message {
+    margin-bottom: 20px;
+    color: #666;
+    font-style: italic;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.relay-btn {
+    padding: 15px 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+}
+
+/* Trạng thái TẮT */
+.relay-btn.OFF {
+    background-color: #dc3545; /* Đỏ */
+}
+.relay-btn.OFF:hover {
+    background-color: #c82333;
+}
+
+/* Trạng thái BẬT */
+.relay-btn.ON {
+    background-color: #28a745; /* Xanh lá */
+}
+.relay-btn.ON:hover {
+    background-color: #1e7e34;
+}
+
+.status-indicator {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+    padding: 3px 5px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.refresh-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.refresh-btn:hover {
+    background-color: #0056b3;
+}

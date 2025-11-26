@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điều Khiển 8 Relay Qua ThingSpeak</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Điều Khiển 8 Relay (ThingSpeak)</h1>
+        <p class="status-message" id="status-message">Đang kết nối...</p>
+        
+        <div class="grid-container">
+            <script>
+                for (let i = 1; i <= 4; i++) {
+                    document.write(`
+                        <button class="relay-btn OFF" data-relay-id="${i}" data-field="${i}" id="btn-relay-${i}">
+                            Relay ${i}
+                            <span class="status-indicator">TẮT</span>
+                        </button>
+                    `);
+                }
+            </script>
+        </div>
+        <button class="refresh-btn" onclick="fetchCurrentStates()">Tải lại trạng thái</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
